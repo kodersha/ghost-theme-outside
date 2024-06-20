@@ -1,0 +1,19 @@
+{{#contentFor "title"}}{{tag.name}}{{/contentFor}}
+
+{{!< default}}
+{{> header}}
+
+<main>
+  <section class="section-tag">
+    {{#if tag.feature_image}}
+      <img class="image" src="{{tag.feature_image}}" alt="{{tag.name}}" />
+    {{/if}}
+
+    <h1 style="--color-tag: {{tag.accent_color}}">{{tag.name}}{{plural pagination.total empty='' singular='' plural=' <sup>%</sup>'}}</h1>
+    {{#if tag.description}}
+      <p>{{tag.description}}</p>
+    {{/if}}
+  </section>
+
+  {{> "loop"}}
+</main>

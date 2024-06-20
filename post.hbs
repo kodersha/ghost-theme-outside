@@ -1,0 +1,57 @@
+{{#contentFor "title"}}{{meta_title}}{{/contentFor}}
+
+{{!< default}}
+{{> header}}
+
+{{#post}}
+<main>
+  <article class="post-single {{post_class}}">
+    {{#if tags}}
+      <nav>
+        <ul class="tags">
+          {{#foreach tags}}
+            <li class="tag tag-{{id}} {{slug}}" style="--color-tag: {{accent_color}}"><a href="{{url}}">{{name}}</a></li>
+          {{/foreach}}
+        </ul>
+      </nav>
+    {{/if}}
+
+    {{#match @page.show_title_and_feature_image}}
+      <h1>{{title}}</h1>
+
+      {{#if feature_image}}
+        <figure class="kg-thumbnail">
+          <img loading="lazy" class="emerge" data-effect="slide" data-spin="true" src="{{img_url feature_image size="thumbnail"}}" alt="{{title}}" />
+          {{#if feature_image_caption}}
+            <figcaption>{{feature_image_caption}}</figcaption>
+          {{/if}}
+        </figure>
+      {{/if}}
+    {{/match}}
+
+    {{content}}
+
+    <applause-button url="{{id}}" color="#ffffff" multiclap="false"></applause-button>
+  </article>
+
+  {{!-- Remark42 --}}
+  {{!--
+  <section class="section-comments">
+    <div id="remark42"></div>
+    <script>
+      var remark_config = {
+        host: '',
+        site_id: '',
+        url: '{{url}}',
+        components: ['embed'],
+        show_email_subscription: false,
+        show_rss_subscription: false,
+        no_footer: true,
+        locale: 'en',
+        theme: 'dark'
+      }
+    </script>
+  </section>
+  --}}
+</main>
+{{/post}}

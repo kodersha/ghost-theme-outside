@@ -1,0 +1,102 @@
+html {
+  overflow-x: hidden;
+
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+
+  min-width: 100vw;
+}
+
+body {
+  font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0, "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum" 0, "zero" 0, "ss01" 0, "ss02" 0, "ss03" 0, "ss04" 0, "cv01" 0, "cv02" 0, "cv03" 0, "cv04" 0, "cv05" 0, "cv06" 0, "cv07" 0, "cv08" 0, "cv09" 0, "cv10" 0, "cv11" 0, "calt", "ccmp", "kern";
+  font-family: var(--font-family);
+
+  cursor: default;
+
+  margin-bottom: unset;
+  margin-right: unset;
+  margin-left: unset;
+  margin-top: unset;
+
+  padding-right: var(--body-margin);
+  padding-left: var(--body-margin);
+
+  min-height: 100vh;
+
+  flex-direction: column;
+  display: flex;
+
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-mark);
+  color: var(--color-black);
+
+  -webkit-box-decoration-break: clone;
+  -moz-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+a {
+  -webkit-transition: text-decoration-color .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease, opacity .2s ease;
+  -moz-transition: text-decoration-color .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease, opacity .2s ease;
+  transition: text-decoration-color .2s ease, border-color .2s ease, background-color .2s ease, color .2s ease, opacity .2s ease;
+
+  text-decoration: none;
+  outline: 0;
+
+  color: var(--body-text-color);
+
+  &.hover,
+  &:hover {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.15;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  &::first-letter {
+    margin-left: -1.5px;
+  }
+}
+
+main {
+  position: relative;
+
+  flex-direction: column;
+  row-gap: var(--main-gap);
+  display: flex;
+
+  padding-bottom: var(--main-gap);
+  padding-top: var(--main-gap);
+
+  & > section {
+    position: relative;
+
+    max-width: var(--inner);
+    @extend .fill-available;
+
+    margin-bottom: unset;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: unset;
+  }
+}

@@ -1,0 +1,8 @@
+<nav class="pagination" role="navigation">
+  {{#if prev}}
+    <a class="newer-posts" href="{{page_url prev}}">&larr; {{t "Newer Posts"}}</a>
+  {{/if}}
+  {{#if next}}
+    <a class="older-posts" href="{{page_url next}}">{{t "Older Posts"}} &rarr;</a>
+  {{/if}}
+</nav>

@@ -1,0 +1,90 @@
+body>.header {
+  position: relative;
+
+  padding-bottom: 1.25rem;
+  padding-right: unset;
+  padding-left: unset;
+  padding-top: 1.25rem;
+
+  align-items: center;
+  column-gap: 1.5rem;
+  flex-wrap: wrap;
+  display: flex;
+
+  &>* {
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+  .logo {
+    position: relative;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    border-radius: 50%;
+
+    height: 3rem;
+    width: 3rem;
+
+    &>* {
+      display: block;
+    }
+  }
+
+  &>h1 {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  nav {
+    position: relative;
+
+    align-items: center;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+    display: flex;
+
+    margin-right: unset;
+    margin-left: auto;
+
+    ul {
+      list-style: none;
+
+      padding-bottom: unset;
+      padding-right: unset;
+      padding-left: unset;
+      padding-top: unset;
+
+      margin-bottom: unset;
+      margin-right: unset;
+      margin-left: unset;
+      margin-top: unset;
+
+      align-items: center;
+      column-gap: 1.5rem;
+      flex-wrap: wrap;
+      display: flex;
+
+      li {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .gh-search {
+    color: var(--color-white);
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    height: 3rem;
+    width: 3rem;
+  }
+}

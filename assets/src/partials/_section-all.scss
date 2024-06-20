@@ -1,0 +1,133 @@
+.section-all {
+  & > * {
+    margin-bottom: var(--article-margin);
+    margin-top: var(--article-margin);
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    &:first-child {
+      margin-top: unset;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: var(--ghost-accent-color);
+
+    sup {
+      vertical-align: super;
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      color: var(--color-description);
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+
+        width: 100vw;
+        height: 1px;
+        right: 50%;
+        left: 50%;
+
+        max-width: unset;
+        display: block;
+
+        margin-right: -50vw;
+        margin-left: -50vw;
+
+        background-color: var(--color-line);
+      }
+
+      &::after {
+        bottom: -0.5px;
+      }
+
+      &::before {
+        top: -0.5px;
+      }
+
+      & > a {
+        font-size: var(--article-font-size);
+        font-weight: 500;
+        line-height: var(--article-line-height);
+        color: var(--body-text-color);
+
+        padding-bottom: calc(var(--gap) / 2);
+        padding-top: calc(var(--gap) / 2);
+
+        display: block;
+
+        &:hover {
+          color: var(--color-link);
+        }
+
+        sup {
+          position: relative;
+          overflow: hidden;
+          z-index: 10;
+
+          transition: color .2s ease;
+
+          padding-bottom: 0.25rem;
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+          padding-top: 0.25rem;
+
+          margin-right: unset;
+          margin-left: 0.75rem;
+
+          vertical-align: top;
+
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1;
+
+          color: var(--color-description);
+
+          &::before {
+            content: '';
+
+            transition: opacity .2s ease, background-color .2s ease;
+
+            position: absolute;
+            z-index: -5;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+
+            background-color: var(--color-description);
+            border-radius: 0.25rem;
+            opacity: 0.1;
+          }
+
+          &:hover {
+            transition: none;
+
+            &::before {
+              transition: none;
+
+              background-color: var(--color-tag);
+              opacity: 0.2;
+            }
+
+            color: var(--color-tag);
+          }
+        }
+      }
+    }
+  }
+}

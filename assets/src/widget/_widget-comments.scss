@@ -1,0 +1,11 @@
+.widget-comments {
+  position: relative;
+
+  max-width: var(--wrapper);
+  @extend .fill-available;
+
+  margin-bottom: unset;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: unset;
+}

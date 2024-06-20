@@ -1,0 +1,34 @@
+.section-tag {
+  & > * {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    &:first-child {
+      margin-top: unset;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: var(--color-tag);
+
+    sup {
+      vertical-align: super;
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      color: var(--color-description);
+    }
+  }
+
+  p {
+    font-size: calc(var(--article-font-size) + 0.25rem);
+    line-height: var(--article-line-height);
+
+    color: var(--color-description);
+  }
+}

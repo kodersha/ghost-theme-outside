@@ -1,0 +1,30 @@
+{{#if pagination.prev}}
+  <nav class="navigation-loop">
+    <a class="newer-posts" rel="prev" href="{{@site.url}}/page/{{pagination.prev}}">{{> "icons/left"}}</a>
+  </nav>
+{{/if}}
+
+{{#foreach posts}}
+  <article class="post-single {{post_class}}">
+    {{#if tags}}
+    <nav>
+      <ul class="tags">
+        {{#foreach tags}}
+          <li class="tag tag-{{id}} {{slug}}" style="--color-tag: {{accent_color}}"><a href="{{url}}">{{name}}</a></li>
+        {{/foreach}}
+      </ul>
+    </nav>
+    {{/if}}
+
+    <h1><a href="{{url}}">{{title}}</a></h1>
+    {{content}}
+  </article>
+{{/foreach}}
+
+{{#if pagination.next}}
+  <nav class="navigation-loop">
+    <a class="older-posts" rel="next" href="{{@site.url}}/page/{{pagination.next}}">{{> "icons/right"}}</a>
+  </nav>
+{{/if}}
+
+{{#contentFor "homepage"}}{{/contentFor}}

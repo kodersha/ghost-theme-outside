@@ -1,0 +1,51 @@
+{
+  "name": "outside",
+  "description": "Minimal theme for Ghost",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=5.9.4"
+  },
+  "author": {
+    "name": "kodersha",
+    "email": "kodersha@yandex.ru",
+    "url": "https://kodersha.ru"
+  },
+  "config": {
+    "posts_per_page": 10,
+    "card_assets": true,
+    "image_sizes": {
+      "thumbnail": {
+        "width": 1280
+      }
+    }
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Responsive",
+      "Typographic"
+    ]
+  },
+  "keywords": [
+    "responsive",
+    "ghost-theme",
+    "theme"
+  ],
+  "scripts": {
+    "dev": "gulp",
+    "test": "gscan .",
+    "test:ci": "gscan --fatal --verbose .",
+    "pretest": "gulp build",
+    "preship": "yarn test"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.7"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

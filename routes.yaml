@@ -1,0 +1,13 @@
+routes:
+  /all/:
+    controller: channel
+    template: all
+
+collections:
+  /:
+    permalink: /all/{slug}/
+    template:
+      - index
+
+taxonomies:
+  tag: /tag/{slug}/

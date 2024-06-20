@@ -1,0 +1,14 @@
+{{#contentFor "title"}}{{meta_title}}{{/contentFor}}
+
+{{!< default}}
+{{> header}}
+
+<main>
+  {{#is "home"}}
+    <section class="section-welcome">
+      <p>{{{@site.description}}}</p>
+    </section>
+  {{/is}}
+
+  {{> "loop"}}
+</main>

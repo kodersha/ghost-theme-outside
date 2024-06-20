@@ -1,0 +1,9 @@
+<footer>
+  <p class="copyright">
+    <a target="_blank" rel="nofollow" title="{{@site.title}}" href="https://t.me/">{{t "@tg"}}</a>,
+    {{#is "post"}}{{#post}}{{date format="DD MMMM YYYY"}}{{/post}}{{else}}{{date format="YYYY"}}{{/is}}
+  </p>
+
+  <p class="ghost">{{t "Proudly published with"}} <a target="_blank" rel="nofollow"
+    href="https://ghost.org">{{t "Ghost"}}</a></p>
+</footer>

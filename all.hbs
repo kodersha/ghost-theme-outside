@@ -1,0 +1,19 @@
+{{#contentFor "title"}}{{t "Archive"}}{{/contentFor}}
+
+{{!< default}}
+{{> header}}
+
+<main>
+  <section class="section-tag">
+    <h1 style="--color-tag: var(--ghost-accent-color)">{{t "Archive"}}{{#get 'posts'}}<sup>{{pagination.total}}</sup>{{/get}}</h1>
+  </section>
+  <section class="section-all">
+    <ul>
+      {{#get "posts" limit="all" as |posts| }}
+        {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+      {{/get}}
+    </ul>
+  </section>
+</main>

@@ -1,0 +1,105 @@
+.section-loop {
+  & > * {
+    &:last-child {
+      margin-bottom: unset !important;
+    }
+
+    &:first-child {
+      margin-top: unset !important;
+    }
+  }
+}
+
+.navigation-loop {
+  position: relative;
+  @extend .inner;
+
+  & > a {
+    position: relative;
+    overflow: hidden;
+
+    transform: translateY(0);
+    transition: transform .5s ease;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    max-width: 3rem;
+    min-width: 3rem;
+    width: 3rem;
+
+    max-height: 3rem;
+    min-height: 3rem;
+    height: 3rem;
+
+    background-color: var(--ghost-accent-color);
+
+    @extend .goo;
+
+    &.newer-posts {
+      &:hover {
+        transition: transform .25s ease;
+        transform: translateY(-0.25rem);
+      }
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    &.older-posts {
+      &:hover {
+        transition: transform .25s ease;
+        transform: translateY(0.25rem);
+      }
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.status {
+  position: absolute;
+  display: none;
+
+  bottom: calc(var(--main-gap) / 2);
+  right: 0;
+  left: 0;
+
+  height: 0;
+
+  @extend .inner;
+
+  &>div {
+    position: relative;
+    transform: translateY(-50%);
+
+    &>div {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .infinite-scroll-request {
+    svg {
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 2s;
+      animation-name: spin;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

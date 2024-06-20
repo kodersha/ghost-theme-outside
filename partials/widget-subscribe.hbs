@@ -1,0 +1,21 @@
+{{^if @member}}
+  <section class="widget-subscribe">
+    <div>
+      <p class="message">{{t "Like what you see?"}} {{t "Get new posts by email"}}</p>
+
+      <form data-members-form="subscribe">
+        <input data-members-email placeholder="{{t "Your email address"}}" type="email" required="true" /><button type="submit"><span>{{t "Subscribe"}}</span></button>
+      </form>
+
+      <p class="message-success">
+        {{t "Great! Check your inbox and click the link to confirm your subscription."}}
+      </p>
+
+      <p class="message-error">
+        {{t "Please enter a valid email address!"}}
+      </p>
+
+      <div data-members-error></div>
+    </div>
+  </section>
+{{/if}}

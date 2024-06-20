@@ -1,0 +1,53 @@
+{{#if pagination.prev}}
+  <nav class="navigation-loop">
+    <a class="newer-posts" rel="prev" href="{{@site.url}}/page/{{pagination.prev}}">{{> "icons/left"}}</a>
+  </nav>
+{{/if}}
+
+<section class="section-loop">
+  {{#foreach posts}}
+    <article class="post-teaser {{post_class}}">
+      {{#has tag="#archive"}}
+        <a href="{{url}}">{{title}}</a>
+      {{else}}
+        {{#if feature_image}}
+          <figure>
+            <a href="{{url}}">
+              <img loading="lazy" class="post-card-image emerge" data-effect="slide" data-spin="true" 
+                  src="{{img_url feature_image size="thumbnail"}}" alt="{{title}}" />
+            </a>
+          </figure>
+        {{/if}}
+
+        <header>
+          {{#if featured}}{{> "icons/fire"}}{{/if}}
+          <h2><a href="{{url}}">{{title}}</a></h2>
+          <p><a href="{{url}}">{{excerpt words="35"}}</a></p>
+
+          {{^is "tag"}}
+            {{#primary_tag}}
+              <nav><a class="tag tag-{{slug}}" style="--color-tag: {{accent_color}}" href="{{url}}">{{name}}</a></nav>
+            {{/primary_tag}}
+          {{/is}}
+        </header>
+      {{/has}}
+    </article>
+  {{/foreach}}
+</section>
+
+{{#if pagination.next}}
+  <nav class="navigation-loop infinite-hidden">
+    <a class="older-posts" rel="next" href="{{@site.url}}/page/{{pagination.next}}">{{> "icons/right"}}</a>
+  </nav>
+{{/if}}
+
+<loader class="status">
+  <div class="infinite-scroll-request">
+    <div>{{> "icons/loader"}}</div>
+  </div>
+</loader>
+
+{{#contentFor "homepage"}}
+  <script type="text/javascript" src="{{asset "homepage.js"}}"></script>
+  <script type="text/javascript" src="{{asset "homepage-load.js"}}"></script>
+{{/contentFor}}
