@@ -1,2 +1,4 @@
-# ghost-themes-outside
-Minimal theme for Ghost
+# outside
+Minimal theme for Ghost.
+
+![Cover](/.screenshots/cover.png)
