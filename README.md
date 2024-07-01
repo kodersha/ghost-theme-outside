@@ -4,10 +4,12 @@
 ![Cover](/.screenshots/cover.png)
 
 <details>
-  <summary>More screenshots →</summary>
+  <summary>MORE SCREENSHOTS</summary>
+  
+  &nbsp;
+  &nbsp;
   
   ![Post](/.screenshots/post.png)
-
   ![Cover](/.screenshots/tag.png)
 
 </details>
