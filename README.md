@@ -3,6 +3,15 @@
 
 ![Cover](/.screenshots/cover.png)
 
+<details>
+  <summary>More screenshots →</summary>
+  
+  ![Post](/.screenshots/post.png)
+
+  ![Cover](/.screenshots/tag.png)
+
+</details>
+
 &nbsp;
 &nbsp;
 &nbsp;
