@@ -63,6 +63,58 @@
     margin-bottom: 0.75rem;
     margin-top: unset;
 
+    .J_A {
+      align-items: center;
+      column-gap: 0.5rem;
+      display: flex;
+      float: right;
+
+      .J_C {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        cursor: pointer;
+
+        svg {
+          path {
+            stroke: var(--color-description);
+          }
+        }
+
+        &:hover {
+          svg {
+            path {
+              stroke: var(--color-link);
+            }
+          }
+        }
+      }
+
+      .P_A {
+        .P_B, 
+        .P_D, 
+        .P_F {
+          display: none !important;
+        }
+
+        .J_H {
+          color: var(--color-description);
+
+          &.J_J {
+            color: rgb(78, 243, 37);
+          }
+          &.J_I {
+            color: rgb(243, 121, 37);
+          }
+        }
+      }
+
+      .J_D {
+        transform: rotate(-180deg);
+      }
+    }
+
     .L_A {
       position: absolute;
       z-index: 10;
@@ -346,7 +398,7 @@
           opacity: 0;
         }
 
-        &>* {
+        & > * {
           &:last-child {
             @include media("max", "md") {
               padding-right: 1rem;
