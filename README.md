@@ -36,3 +36,6 @@ To rebuild all CSS and JS files, run `yarn dev` in the `outside` folder.
 
 #### footer
 You can add your own link to telegram or another social network in the `partials/footer.hbs` file, line three.
+
+#### other
+You can use the internal tag `#archive` to display a post without a preview.
