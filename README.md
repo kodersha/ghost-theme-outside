@@ -19,10 +19,8 @@ Just install `.zip` archive in the "Design & branding" section of your Ghost adm
 
 #### remark42 styles
 To override Remark42 CSS, add the following to `nginx.conf`:
-
 ```
 # Section for proxying CSS remark file.
-# In the `location` line, specify the correct path to `remark.css`.
 
 location /comments/web/remark.css {
   alias /ghost/themes/outsude/assets/comments.css;
@@ -31,6 +29,7 @@ location /comments/web/remark.css {
   }
 }
 ```
+In the `location` line, specify the correct path to `remark.css`.
 
 #### rebuild CSS & JS
 To rebuild all CSS and JS files, run `yarn dev` in the `outside` folder.
